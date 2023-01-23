@@ -1,4 +1,6 @@
 export interface PictureObject {
-	picture: string,
+	src: string,
 	active: boolean,
+	id: string,
+	text: string,
 };

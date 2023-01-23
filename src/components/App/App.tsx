@@ -9,6 +9,7 @@ import picture6 from '../../resources/img/picture6.jpg';
 import picture7 from '../../resources/img/picture7.jpg';
 import picture8 from '../../resources/img/picture8.jpg';
 import { PictureObject } from '../../interfaces';
+import uuid from 'react-uuid';
 
 
 const App: React.FC = () => {
@@ -24,12 +25,27 @@ const App: React.FC = () => {
 	];
 
 	function onPutInObject(picture: string): PictureObject {
-		return { picture, active: false }
+		return { src: picture, active: false, id: uuid(), text: 'T. Kinkade' }
 	};
+
+	const result = pictures.map((picture, index) => {
+		const { src, active, id, text } = picture;
+		return (
+			<div className="app__picture" key={id}>
+				<img src={src} alt={`picture ${index + 1}`} />
+				<h3>{text}</h3>
+			</div>
+		)
+	})
 
 
 	return (
-		<p>works</p>
+		<div className="app">
+			<h1 className='app__title'>Thomas Kinkade</h1>
+			<div className="app__wraper">
+				{result}
+			</div>
+		</div>
 	);
 };
 
