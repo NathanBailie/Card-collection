@@ -30,10 +30,17 @@ const App: React.FC = () => {
 
 	const result = pictures.map((picture, index) => {
 		const { src, active, id, text } = picture;
+		let pictureClasses = 'app__picture';
+		let signatureСlasses = 'app__signature';
+
+		if (active) {
+			pictureClasses += ' app__picture_active';
+			signatureСlasses += ' app__signature_active';
+		}
 		return (
-			<div className="app__picture" key={id}>
+			<div className={pictureClasses} key={id}>
 				<img src={src} alt={`picture ${index + 1}`} />
-				<h3>{text}</h3>
+				<h3 className={signatureСlasses}>{text}</h3>
 			</div>
 		)
 	})
