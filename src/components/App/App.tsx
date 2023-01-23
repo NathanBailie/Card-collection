@@ -1,5 +1,6 @@
 import 'normalize.css';
 import './app.scss';
+import '../../resources/fonts/fonts.scss';
 import picture1 from '../../resources/img/picture1.jpg';
 import picture2 from '../../resources/img/picture2.jpg';
 import picture3 from '../../resources/img/picture3.jpg';
