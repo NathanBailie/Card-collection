@@ -5,12 +5,10 @@
 	font-family: sans-serif;
 }
 
-html {
-	background: #4b4b4b;
-}
-
 .app {
+	background: linear-gradient(220deg, #a270b3, #2c5a2d);
 	padding: 15px;
+	height: 100vh;
 
 	&__title {
 		text-align: center;

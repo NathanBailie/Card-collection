@@ -38,7 +38,7 @@ const App: React.FC = () => {
 		if (active) {
 			pictureClasses += ' app__picture_active';
 			signatureСlasses += ' app__signature_active';
-		}
+		};
 		return (
 			<div
 				className={pictureClasses}
